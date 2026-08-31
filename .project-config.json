@@ -1,0 +1,42 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "server",
+    "db",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://3VVzW8z95bb6UAB.root:50cpUU0zby8f10ffpUxJ@gateway05.us-east-1.prod.aws.tidbcloud.com:4000/Ln4h2Mei9q9rruGehohcEn?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/Ln4h2Mei9q9rruGehohcEn.git",
+    "expiration": "2026-09-01T03:43:53.194Z",
+    "token": "art_v2_x_32c990c7c97865ca6971c7e563b24f7e84c3022e?expires=1788234233",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "crush-confessions",
+  "path": "/home/ubuntu/crush-confessions",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "duvFj5ayxVhZZZYKu6EQke",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "PkpgjiYcvMVPtMtNhZfXaq",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "MrFnzzy",
+    "OWNER_OPEN_ID": "MqR4X3KTg9XmjeQ2HMbYm2",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "0ec21a63-3c8b-45ad-a661-b418d90ff116",
+    "VITE_APP_ID": "Ln4h2Mei9q9rruGehohcEn",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Secret Crush Wall",
+    "VITE_FRONTEND_FORGE_API_KEY": "nqrJRFJMTr4Tg54XwpRGXG",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}
