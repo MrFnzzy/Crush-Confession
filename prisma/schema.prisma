@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Confession {
+  id        Int      @id @default(autoincrement())
+  fromName  String    @db.VarChar(100)
+  toName    String    @db.VarChar(100)
+  message   String
+  createdAt DateTime  @default(now())
+  isDeleted Boolean   @default(false)
+  replies   Reply[]
+}
+
+model Reply {
+  id           Int        @id @default(autoincrement())
+  confessionId Int
+  message      String
+  createdAt    DateTime   @default(now())
+  isDeleted    Boolean    @default(false)
+  confession   Confession @relation(fields: [confessionId], references: [id], onDelete: Cascade)
+}
