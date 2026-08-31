@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1b1029;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(226, 83, 107, 0.1), transparent 42%),
+    radial-gradient(circle at 85% 0%, rgba(217, 164, 65, 0.09), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(58, 38, 80, 0.5), transparent 55%);
+  color: #faf3e4;
+}
+
+::selection {
+  background: #e2536b;
+  color: #faf3e4;
+}
+
+:focus-visible {
+  outline: 2px solid #d9a441;
+  outline-offset: 2px;
+}
+
+/* Corkboard texture, used behind the wall of confessions only */
+.corkboard {
+  background-image: radial-gradient(rgba(250, 243, 228, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Wax-seal pin at the top of a pinned note */
+.pin::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #ffe1a8, #d9a441 70%);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Deterministic tilt so notes on the wall read as pinned, not as
+   identical cards in a list. Applied by nth-child, not inline style,
+   so there's no client/server hydration mismatch. */
+.note-tilt > *:nth-child(6n + 1) { transform: rotate(-1.1deg); }
+.note-tilt > *:nth-child(6n + 2) { transform: rotate(0.8deg); }
+.note-tilt > *:nth-child(6n + 3) { transform: rotate(-0.5deg); }
+.note-tilt > *:nth-child(6n + 4) { transform: rotate(1.3deg); }
+.note-tilt > *:nth-child(6n + 5) { transform: rotate(-1.4deg); }
+.note-tilt > *:nth-child(6n + 6) { transform: rotate(0.5deg); }
+.note-tilt > * {
+  transition: transform 0.2s ease;
+}
+.note-tilt > *:hover,
+.note-tilt > *:focus-within {
+  transform: rotate(0deg) scale(1.01);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes driftIn {
+  from {
+    opacity: 0;
+    transform: rotate(-6deg) translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
