@@ -1,0 +1,34 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/juwfsDqPQvHrpfjJUb8ig4.git",
+    "expiration": "2026-09-02T03:38:00.671Z",
+    "token": "art_v2_x_8da458330add10b3afc3828dce65fbc77a4b3e90?expires=1788320280",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "confession-wall-word-filter",
+  "path": "/home/ubuntu/confession-wall-word-filter",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "QNsckTkVMAk8NLh6MeLNMv",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "eCJk7VExGse8mr3hZvqcNX",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Baymax",
+    "OWNER_OPEN_ID": "ip2yQRxtTWGxFBdsoGHPzF",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "14916590-8e33-4ba7-8d2f-6d6f57799060",
+    "VITE_APP_ID": "juwfsDqPQvHrpfjJUb8ig4",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Confession Wall",
+    "VITE_FRONTEND_FORGE_API_KEY": "L376szADnizxhNpXsDqjKr",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
